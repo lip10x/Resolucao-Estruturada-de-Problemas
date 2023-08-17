@@ -16,6 +16,6 @@ void main(){
 	printf("Informe o ano de nascimento: ");
 	scanf("%d", &an);
 	printf("Idade: %d", 
-		calcular_idade(an, aa)
+		calcular_idade(aa, an)
 	);
 }

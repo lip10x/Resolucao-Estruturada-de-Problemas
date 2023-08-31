@@ -2,42 +2,47 @@
 #include <conio.h>
 
 
-void funcao(int a,int b){
-	int soma=0;
+void funcao(int a, int b){
+	
+	int soma=0, media=0, subtra=0, maior_numero;
+	
 	if(a%2==0 && b%2==0){
 		soma = a+b;
-	printf("%d", soma);
-	}
-int sub(){
-	int subtra=0;
-	if(a%2!=0 && b%2!=0){
+		printf("Resultado da soma: %d", soma);
+		}
+
+	else
+		if(a%2!=0 && b%2!=0){
 		subtra = a-b;
-		return subtra;	
-	}
-}
-void media(float a, float b){
-	float media=0;
-	if(a%2==0 && b%2!=0){
+		printf("Resultado da subtracao %d", subtra);
+		}
+	
+	else
+		if(a%2==0 && b%2!=0){
 		media = (a+b)/2;
-	printf("valor retornado: %f", media);
+		printf("Resultado da media: %d", media);
+		}
+
+		else
+			if(a%2!=0 && b%2==0){
+				if(a>b){
+					printf("Maior numero: %d", a);
+				}
+				else printf("Maior numero: %d", b);
+			}
+
 	}
-}
-int maior_numero(){
-	if(a%2!=0 && b%2==0){
-		
-	}
-}
-}
+
+
 
 void main(){
 	
-	float a, b, valor;
+	int a, b;
 	printf("Insira o valor de A: ");
-	scanf("%f", &a);
+	scanf("%d", &a);
 	printf("Insira o valor de B: ");
-	scanf("%f", &b);
+	scanf("%d", &b);
 	
-	valor = funcao(a,b);
+	funcao(a, b);
 	
-	printf("Valor retornado: %f", valor);
 }

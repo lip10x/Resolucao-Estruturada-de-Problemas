@@ -2,13 +2,9 @@
 #include <conio.h>
 
 
-
-
-
-
 float salario_bruto(float *sb){
 	
-	printf("\nDigite o salario bruto: ");
+	printf("Digite o salario bruto: ");
 	scanf("%f", &sb);
 	
 	
@@ -28,21 +24,22 @@ float descontos(float *dsc){
 	
 }
 
-float ganho_horas(float hrs) {
-    float ganho_total = hrs * 20;
+float ganho_horas(float hora) {
+    float ganho_total = hora * 20;
     return ganho_total;
 }
 
 
 void main(){
 	
-	float sb, hrs, dsc, ganho;
+	float sb, hrs, dsc, hora;
 	
 	
 	printf("Salario bruto: %0.2f", salario_bruto(&sb));
 	printf("Horas extras trabalhadas: %0.2f", horas_extras(&hrs));
 	printf("Descontos recebidos: %0.2f", descontos(&dsc));
-	printf("\nGanho por horas extras: %0.2f", ganho_horas(hrs));
+	printf("\nGanho por horas extras: %0.2f", ganho_horas(hora));
+	hora = horas_extras(&hrs);
 	
 	
 }

@@ -38,8 +38,8 @@ void main(){
 	printf("Salario bruto: %0.2f", salario_bruto(&sb));
 	printf("Horas extras trabalhadas: %0.2f", horas_extras(&hrs));
 	printf("Descontos recebidos: %0.2f", descontos(&dsc));
-	printf("\nGanho por horas extras: %0.2f", ganho_horas(hora));
 	hora = horas_extras(&hrs);
+	printf("\nGanho por horas extras: %0.2f", ganho_horas(hora));
 	
 	
 }

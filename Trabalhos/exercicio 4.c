@@ -2,46 +2,87 @@
 #include <conio.h>
 
 
-float salario_bruto(float *sb){
+
+float sal_brt(){
 	
-	printf("Digite o salario bruto: ");
-	scanf("%f", &sb);
+	float sal; 
 	
+	printf("\nDigite seu Salario: ");
+	scanf("%f", &sal);
+	
+	return sal;	
 }
-
-float descontos(float *dsc){
+float hora_extra(){
 	
-	printf("\nDigite o total de descontos: ");
-	scanf("%f", &dsc);
+	float extra;
 	
+	printf("\nDigite as horas extras: ");
+	scanf("%f", &extra);
+	
+	return extra;
 }
-
-float ganho_horas(float hora) {
-    float ganho_total = hora * 20;
-    return ganho_total;
-}
-
-float horas_extras(float *hrs){
+float descontos(){
 	
-	printf("\nDigite o total de horas extras: ");
-	scanf("%f", &hrs);
+	float val_descontos;
 	
+	printf("\nDigite os Descontos: ");
+	scanf("%f", &val_descontos);
+	
+	return val_descontos;	
 }
-
-
+float total_horas(float extra){
+	
+	float multi;
+	
+	multi = extra * 20;
+	
+	return multi;
+}
+float calc_sal(float val_horas_extra, float sal){
+	
+	float sal_total;
+	
+	sal_total = val_horas_extra + sal;
+	
+	return sal_total;
+}
+void sal_liquido(float sal_bruto1, float descontos){
+	
+	float sal_liq;
+	
+	sal_liq = sal_bruto1 - descontos;
+	
+	printf("\nSalario Liquido do Funcionario: %0.2f", sal_liq);
+}
 void main(){
 	
-	float sb, hrs, dsc, hora;
+	float sal, extra, taxa_descontos, val_horas_extra, sal_bruto1;
 	
-	
-	printf("Salario bruto: %0.2f", salario_bruto(&sb));
-	printf("Horas extras trabalhadas: %0.2f", horas_extras(&hrs));
-	printf("Descontos recebidos: %0.2f", descontos(&dsc));
-	hora = hrs;
-	printf("\nGanho por horas extras: %0.2f", hora);
-	
-	
+	int i;
+	for(i=0;i<5;i++){
+		printf("\n<<Salario do funcionario(a))>>\n");
+		printf("\nFuncionario Numero: %d",i + 1);
+		
+		//funções de calculo:
+		sal = sal_brt();
+		extra = hora_extra();
+		taxa_descontos = descontos();
+		val_horas_extra = total_horas(extra);
+		sal_bruto1 = calc_sal(val_horas_extra, sal);
+		
+		printf("\nValor das Horas Extras: %0.2f", val_horas_extra);
+		
+		printf("\nSalario Bruto do Funcionario: %0.2f", sal_bruto1);
+		
+		sal_liquido(sal_bruto1, taxa_descontos);
+	}	 
 }
+
+
+
+
+
+
 
 
 

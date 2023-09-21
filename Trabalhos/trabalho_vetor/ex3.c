@@ -2,8 +2,27 @@
 #include <conio.h>
 
 
-
-void main(){
+void preencherArray(float *array, int size) {
+	int i;
 	
-	float vetor[999],
+    for(i = 0; i < size; i++) {
+        printf("Digite o valor %d: ", i + 1);
+        scanf("%f", &array[i]);
+    }
+}
+
+void main() {
+    int size, i;
+    float meuArray[size];
+
+    printf("Digite o tamanho do array: ");
+    scanf("%d", &size);
+
+    preencherArray(meuArray, size);
+
+    printf("Valores digitados:\n");
+    
+    for(i = 0; i < size; i++) {
+        printf("%.2f ", meuArray[i]);
+    }
 }

@@ -14,7 +14,7 @@ void carregar_matriz(int mat[TL][TC]){
 	
 	for(l=0;l<TL;l++){
 		for(c=0;c<TC;c++){
-			
+			x = ( rand() % limite) 
 		}
 	}
 	

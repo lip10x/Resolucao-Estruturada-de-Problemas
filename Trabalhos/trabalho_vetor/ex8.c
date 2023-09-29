@@ -8,7 +8,7 @@ void lerVet(int vetor[], int size);
 void trocarElem(int vetor[], int size);
 void mostrarVet(int vetor[], int size);
 
-int main() {
+void main() {
     int K[TF];
 
     printf("Digite os valores do vetor K[%d]:\n", TF);

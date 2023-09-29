@@ -3,7 +3,7 @@
 
 
 
-int main() {
+void main() {
     int vetorA[10], vetorB[10], result[10], i;
 
     printf("Digite 10 valores inteiros para o primeiro vetor:\n");

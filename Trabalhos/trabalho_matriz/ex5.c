@@ -9,18 +9,18 @@
 
 
 void carregar_matriz(int mat[TL][TC]){
-	int l,c, media;
+	int l,c, media, soma;
 	
 	for(l=0;l<TL;l++){
 		for(c=0;c<TC;c++){
 			printf("Digite um numero para a matriz [%d] [%d]: ", l, c);
 			scanf("%d", &mat[l][c]);
 			if(l==c){
-				media += mat[l][c] ;
+				soma += mat[l][c] ;
 			}
 		}
 	}
-	media = media / TL;
+	media = soma / TL;
 	printf("Media dos numeros da diagonal principal: %d", media);
 }
 
